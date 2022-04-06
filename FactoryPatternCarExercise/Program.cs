@@ -16,8 +16,10 @@ namespace FactoryPatternCarExercise
                 isTrue = int.TryParse(Console.ReadLine(), out tireCount);
             } while (!isTrue);
 
-            ICallable vehicle = VehicleFactory.GetVehicle(tireCount);
-            vehicle.Build();
+
+            //have to store it somewhere
+            IVehicle vehicle = VehicleFactory.GetVehicle(tireCount);
+            vehicle.Drive();
         }
     }
 }

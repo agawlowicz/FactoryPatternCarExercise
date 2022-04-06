@@ -1,15 +1,19 @@
 ﻿using System;
 namespace FactoryPatternCarExercise
 {
-    public class Car : ICallable
+    public class Car : IVehicle
     {
         public Car()
         {
+            Console.WriteLine("Building as new Car!");
         }
 
-        public void Build()
+        public void Drive()
         {
-            Console.WriteLine("You have a car!");
+            Console.WriteLine("You are driving a car!");
+
+            //using GetType()
+            Console.WriteLine($"{GetType().Name} is now driving!");
         }
     }
 }
